@@ -1,0 +1,23 @@
+
+<form action="/contact" method="post">
+  <label for="first_name">First name: </label>
+  <input id="first_name" name="first_name">
+  <br>
+
+  <label for="last_name">Last name:</label>
+  <input id="last_name" name="last_name">
+  <br>
+
+  <label for="group">Group:</label>
+  <input type="text" list="groups" id="group" name="group">
+  <datalist id="groups">
+
+    <% @groups.each do |group| %>
+      <option value="<%= group %>"></option>
+    <% end %>
+
+  </datalist>
+
+  <br>
+  <button type="submit">Create</button>
+</form>

@@ -1,0 +1,22 @@
+---
+- :guid: 1
+  :first_name: Plony
+  :last_name: Almony
+- :guid: 99
+  :first_name: rando
+  :last_name: Rando
+- :guid: 100
+  :first_name: test
+  :last_name: test
+- :guid: 101
+  :first_name: a
+  :last_name: b
+  :group: chevra
+- :guid: 102
+  :first_name: a
+  :last_name: b
+  :group: neighbor
+- :guid: 103
+  :first_name: z
+  :last_name: x
+  :group: test
