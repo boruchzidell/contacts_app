@@ -1,0 +1,5 @@
+
+<% @contact_info.each do |field, value| %>
+   <p> <%= field %> <%= value %></p> 
+<% end %>
+<a href="/<%= @contact_info[:guid]%>/edit">Edit contact</a>

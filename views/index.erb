@@ -1,8 +1,35 @@
+<!-- List of most frequent -->
+<h1>Most Used Contacts</h1>
+<% most_frequent_contacts(3).each do |contact| %>
+  <li>
+    <a href="/<%= contact[:guid] %>">
+      <%= contact[:first_name] %>
+    </a>
+  </li>
+<% end %>
 
+<br>
+
+<form>
+  <label for="group">Filter by:</label>
+  <input type="text" list="groups" id="group" name="group">
+  <datalist id="groups">
+    <% @groups.each do |group| %>
+      <option value="<%= group %>"></option>
+    <% end %>
+  </datalist>
+  <button type="submit">Filter</button>
+</form>
+
+
+<!-- List of contacts -->
+<h1><%= @filter_for_group %> Contacts</h1>
 <ul>
   <% @list.each do |contact| %>
     <li>
-      <%= contact[:first_name] %>
+      <a href="/<%= contact[:guid] %>">
+        <%= contact[:first_name] %>
+      </a>
     </li>
   <% end %>
 </ul>

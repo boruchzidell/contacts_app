@@ -1,21 +1,22 @@
 
 <form action="/contact" method="post">
+  <% if @contact_info[:guid] %>
+    <input type="hidden" name="guid" value="<%= @contact_info[:guid]%>">
+  <% end %>
   <label for="first_name">First name: </label>
-  <input id="first_name" name="first_name">
+  <input id="first_name" name="first_name" value="<%= @contact_info[:first_name]%>">
   <br>
 
   <label for="last_name">Last name:</label>
-  <input id="last_name" name="last_name">
+  <input id="last_name" name="last_name" value="<%= @contact_info[:last_name]%>">
   <br>
 
   <label for="group">Group:</label>
-  <input type="text" list="groups" id="group" name="group">
+  <input type="text" list="groups" id="group" name="group" value="<%= @contact_info[:group]%>">
   <datalist id="groups">
-
     <% @groups.each do |group| %>
       <option value="<%= group %>"></option>
     <% end %>
-
   </datalist>
 
   <br>
